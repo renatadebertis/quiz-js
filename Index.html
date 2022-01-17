@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <h1>Quiz Movie</h1>
+</header>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Movie</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Home Screen -->
+    <div class="main" id="main">
+        <div>
+            <br>
+        </div>
+        <div class="home-box custom-box">
+            <h3>Welcome to the Quiz Movie</h3>
+            <p>Enter your name, please:</p>
+            <input type="text" class="text_name" id="txtName">
+            <p>Instruction:</p>
+            <p>1. You have 2 minutes to complete the quiz.</p>
+            <p>2. You will gain 2 extra bonus points if complete the quiz before 1 minute.</p>
+            <p>Total number of questions: <span class="total-question"></span></p>
+            <button type="button" class="btn" id="startquiz" onclick="startQuiz()">Start Quiz</button>
+        </div>
+
+        <!-- Questions Screen -->
+        <div class=" quiz-box custom-box hide">
+                <!-- Greetings -->
+                <div class="welcome-container"> Hello! </div>
+
+                <!-- Questions Control -->
+                <div class="question-number"> Questions 1 from 20 </div>
+                <br>
+                <!-- Image -->
+                <div class="img">
+                    <img class="img">
+                </div>
+                <br>
+                <br>
+
+                <!-- Questions Text -->
+                <div class="question-text"> Questions </div>
+
+                <!-- Option Container  -->
+                <div class="option-container"> Options </div>
+
+                <div class="next-question-btn">
+                    <button type="button" class="btn" onclick="next()">Next</button>
+                </div>
+
+                <!-- Answers Indicator  -->
+                <div class="answers-indicator"> Indicator </div>
+
+                <!-- Chronometer  -->
+                <div class="chronometer-container"> Chronometer </div>
+        </div>
+
+        <div>
+            <br>
+        </div>
+
+        <!-- Result Screen -->
+        <div class="result-box custom-box hide">
+            <h1>Quiz Result</h1>
+            <table>
+                <tr>
+                    <td>Total Question</td>
+                    <td><span class="total-question"></span></td>
+                </tr>
+                <tr>
+                    <td>Attempt</td>
+                    <td><span class="total-attempt"></span></td>
+                </tr>
+                <tr>
+                    <td>Correct</td>
+                    <td><span class="total-correct"></span></td>
+                </tr>
+                <tr>
+                    <td>Wrong</td>
+                    <td><span class="total-wrong"></span></td>
+                </tr>
+                <tr>
+                    <td>Bonus</td>
+                    <td><span class="bonus"></span></td>
+                </tr>
+                <tr>
+                    <td>Percentage</td>
+                    <td><span class="percentage"></span></td>
+                </tr>
+                <tr>
+                    <td>Your Total Score</td>
+                    <td><span class="total-score"></span></td>
+                </tr>
+            </table>
+            <button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
+       <button type="button" class="btn" onclick="goToHome()">Go To Home</button>
+        </div>
+        <div>
+            <br>
+        </div>
+    </div>
+    <script src="script/question.js"></script>
+    <script src="script/app.js"></script>
+</body>
+
+<footer>
+    <br>
+    <hr>
+    &copy; Copyright 2021 - Formandos: Humberto Fernandes dos Santos & Renata Debertis Pinheiro
+    <br>
+
+</footer>
+
+</html>
